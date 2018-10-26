@@ -56,7 +56,7 @@ server.post("/", function(req, res) {
 	// console.log("Chosen GrammaticalObjects: ", "\n" , randomGrammaticalObjects)
 	// console.log("GrammaticalObjects: ", "\n" , conspiracyData.grammaticalObjects)
 
-	//render conspiracy partial (conspiracy page)
+	// render conspiracy partial (conspiracy page)
 	res.render("conspiracy", conspiracyPOST)
 })
 
