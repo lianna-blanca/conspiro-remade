@@ -20,7 +20,9 @@
   "jest": {
     "setupFiles": [
       "./tests/setup.js"
-    ]
+    ],
+    "verbose": true,
+    "testURL": "http://localhost/"
   },
   "dependencies": {
     "express": "^4.16.2"
