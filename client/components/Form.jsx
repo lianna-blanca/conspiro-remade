@@ -4,7 +4,7 @@ const Form = () => {
 return (
 <div>
   <h3>Enter your name to get a customised conspiracy theory</h3>
-
+  <form></form>
 {/* <p class="intro"><strong>{{intro}}</strong></p>
 <p id="the-conspiracy"><strong>{{ noun }} {{conspiracy}} {{object}}</strong></p> */}
 
