@@ -7,18 +7,24 @@ import Footer from "./Footer"
 class App extends React.Component {
 constructor(props) {
   super(props)
+
+  this.state = {
+    result: ""
+    }
+
 }
 
 myCallback = (dataFromForm) => {
-console.log("in App, myCallback")
-console.log(dataFromForm)
-  return dataFromForm
+  if (dataFromForm !== undefined) {
+  this.setState({result: dataFromForm})
+}
+
 }
 
 
 render() {
 
-let theory = this.myCallback()
+let theory = this.state.result
 // "temp conspiracy text"// come up from Form
 
   return (

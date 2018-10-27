@@ -3,7 +3,9 @@ import React from "react"
 class Form extends React.Component {
 constructor(props) {
   super(props)
-  this.state = {value: ""}
+  this.state = {
+    value: ""
+    }
 
   this.handleChange = this.handleChange.bind(this)
   this.handleSubmittedName = this.handleSubmittedName.bind(this)
@@ -19,6 +21,7 @@ handleSubmittedName(ev) {
   ev.preventDefault();
   if (this.state.value) {
     console.log(this.state.value)
+    this.someFn()
   }
   else {
     this.handleSubmitNoName(ev)
@@ -28,6 +31,7 @@ handleSubmittedName(ev) {
 handleSubmitNoName(ev) {
   ev.preventDefault();
   console.log("no name")
+  this.someFn()
 }
 
 clearInput() {
@@ -43,7 +47,6 @@ someFn = () => {
 
 
 render() {
-  this.someFn()
 return (
 <div>
   <form onSubmit={this.handleSubmittedName}>
