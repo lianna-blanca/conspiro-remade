@@ -35,7 +35,15 @@ clearInput() {
   console.log("cleared")
 }
 
+
+someFn = () => {
+  let dataPassToParent = "Consp theory FROM FORM"
+  this.props.callbackFromParent(dataPassToParent)
+}
+
+
 render() {
+  this.someFn()
 return (
 <div>
   <form onSubmit={this.handleSubmittedName}>

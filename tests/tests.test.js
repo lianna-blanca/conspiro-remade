@@ -35,9 +35,3 @@ test("Form text contains form tag", () => {
   expect(wrapper.html()).toContain(expected)
 })
 
-test("Form text contains form tag", () => {
-  var expected = "<form"
-  let wrapper = shallow(<Form />)
-  expect(wrapper.html()).toContain(expected)
-})
-
