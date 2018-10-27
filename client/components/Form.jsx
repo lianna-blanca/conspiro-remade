@@ -1,35 +1,45 @@
 import React from "react"
 
-const Form = () => {
+class Form extends React.Component {
+constructor(props) {
+  super(props)
+  this.state = {value: ""}
+
+  this.handleChange = this.handleChange.bind(this)
+  this.handleSubmit = this.handleSubmit.bind(this)
+}
+
+handleChange(ev) {
+  this.setState({value: event.target.value})
+}
+
+handleSubmit(ev) {
+  ev.preventDefault();
+  if (this.state.value) {
+    console.log(this.state.value)
+  }
+  else {
+    console.log("no name")
+  }
+}
+
+render() {
 return (
 <div>
-  <h3>Enter your name to get a customised conspiracy theory</h3>
-  <form></form>
-{/* <p class="intro"><strong>{{intro}}</strong></p>
-<p id="the-conspiracy"><strong>{{ noun }} {{conspiracy}} {{object}}</strong></p> */}
-
-{/* <form action="/{{ noun }}" method="post">
-
-<div class="form-group">
-  <label class="control-label" for="pwd"><h3>Enter name:</h3></label>
-  <input type="text" id="name" name="noun">
-</div>
-
-<div class="form-group">        
-  <button type="submit" class="btn btn-danger btn-lg">Generate a personalized conspiracy theory</button>
-</div>
-
-<div class="form-group">        
-  <button type="submit" class="btn btn-danger btn-lg">Generate a random conspiracy theory</button>
-</div>
-</form> */}
-
-{/* <form action="/">
-<button type="submit" class="btn btn-danger btn-lg">Home</button>
-</form> */}
-
+  <form onSubmit={this.handleSubmit}>
+    <div className="form-group">
+      <button type="submit" value="submit" className="btn btn-danger btn-lg">Generate Conspiracy Theory</button>
+    </div>
+    <div className="form-group">
+      <label className="control-label" htmlFor="pwd">
+        <h4>Enter your name for a customised conspiracy theory:</h4>
+        <input type="text" value={this.state.value} onChange={this.handleChange} id="name" name="noun" />
+      </label>
+    </div>
+  </form>
 </div>
 )
+}
 }
 
 export default Form

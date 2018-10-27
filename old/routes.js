@@ -1,11 +1,4 @@
-let express = require("express");
-let	server = express();
 let conspiracyData = require("./conspiracy.json");
-
-server.get("/", function(req, res) {
-	//Render index partial (Homepage)
-	res.render("index")
-})
 
 server.post("/", function(req, res) {
 	//Pull random noun from our list
@@ -14,9 +7,6 @@ server.post("/", function(req, res) {
 	let randomIntro = Math.floor((Math.random() * (conspiracyData.intro.length - 1)));
 	let randomStringsForObjects = Math.floor((Math.random() * (conspiracyData.stringsForObjects.length - 1)));
 	let randomGrammaticalObjects = Math.floor((Math.random() * (conspiracyData.grammaticalObjects.length - 1)));
-
-	//Log body
-	// console.log(req.body)
 
 	//Move request body into noun
 	let conspiracyPOST = req.body;
@@ -38,27 +28,6 @@ server.post("/", function(req, res) {
 		}
 	}
 
-
-
-	// //Log out data
-  // console.log("Chosen noun: ", "\n" , randomNoun)
-	// console.log("nouns: ", "\n" , conspiracyData.nouns, "\n")
-
-	// console.log("Chosen conspiracy: ", "\n" , randomStringsForNouns)
-	// console.log("Conspiracies: ", "\n" , conspiracyData.stringsForNouns)
-
-	// console.log("Chosen Intro: ", "\n" , randomStringsForNouns)
-	// console.log("Intros: ", "\n" , conspiracyData.intro)
-
-	// console.log("Chosen StringsForObjects: ", "\n" , randomStringsForObjects)
-	// console.log("StringsForObjects: ", "\n" , conspiracyData.stringsForObjects)
-
-	// console.log("Chosen GrammaticalObjects: ", "\n" , randomGrammaticalObjects)
-	// console.log("GrammaticalObjects: ", "\n" , conspiracyData.grammaticalObjects)
-
-	// render conspiracy partial (conspiracy page)
 	res.render("conspiracy", conspiracyPOST)
 })
 
-
-module.exports = server
