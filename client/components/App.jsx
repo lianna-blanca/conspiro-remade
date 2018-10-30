@@ -15,6 +15,7 @@ constructor(props) {
 }
 
 callbackFormText = (dataFromForm) => {
+  console.log("In app, callbackFormText", dataFromForm)
   if (dataFromForm !== undefined) {
     this.setState({formName: dataFromForm})
   }
@@ -29,7 +30,7 @@ let theory = this.state.formName // change to a function that will assemble sent
     <div>
       <Header />
       <Result resultText={theory}/>
-      <Form returnConspiracyText={this.callbackFormText}/>
+      <Form getForm={this.callbackFormText}/>
       <Footer />
     </div>
   )

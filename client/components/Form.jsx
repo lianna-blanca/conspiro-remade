@@ -18,10 +18,10 @@ handleChange(ev) {
 handleSubmit(ev) {
   ev.preventDefault();
   if (this.state.submittedName) {
-    this.props.returnConspiracyText(this.state.submittedName)
+    this.props.getForm(this.state.submittedName)
   }
   else {
-    this.props.returnConspiracyText()
+    this.props.getForm()
   }
 }
 
