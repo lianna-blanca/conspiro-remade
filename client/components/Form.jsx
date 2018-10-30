@@ -4,7 +4,7 @@ class Form extends React.Component {
 constructor(props) {
   super(props)
   this.state = {
-    value: ""
+    submittedName: ""
     }
 
   this.handleChange = this.handleChange.bind(this)
@@ -14,33 +14,32 @@ constructor(props) {
 }
 
 handleChange(ev) {
-  this.setState({value: ev.target.value})
+  this.setState({submittedName: ev.target.value})
 }
 
 handleSubmittedName(ev) {
   ev.preventDefault();
-  if (this.state.value) {
-    console.log(this.state.value)
-    this.someFn()
+  if (this.state.submittedName) {
+    this.sendTextToResult() // for using state value
   }
   else {
-    this.handleSubmitNoName(ev)
+    this.handleSubmitNoName(ev) // for generating without state value
   }
 }
 
 handleSubmitNoName(ev) {
   ev.preventDefault();
   console.log("no name")
-  this.someFn()
+  this.sendTextToResult()
 }
 
 clearInput() {
-  this.setState({value: ""})
+  this.setState({submittedName: ""})
   console.log("cleared")
 }
 
 
-someFn = () => {
+sendTextToResult = () => {
   let dataPassToParent = "Consp theory FROM FORM"
   this.props.callbackFromParent(dataPassToParent)
 }
@@ -56,7 +55,7 @@ return (
     <div className="form-group">
       <label className="control-label" htmlFor="pwd">
         <h4>Enter your name for a customised conspiracy theory:</h4>
-        <input type="text" value={this.state.value} onChange={this.handleChange} id="name" name="noun" /><button type="reset" onClick={() => {this.clearInput()}}>Clear</button>
+        <input type="text" value={this.state.submittedName} onChange={this.handleChange} id="name" name="noun" /><button type="reset" onClick={() => {this.clearInput()}}>Clear</button>
       </label>
     </div>
   </form>
