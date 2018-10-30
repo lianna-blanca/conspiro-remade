@@ -9,29 +9,27 @@ constructor(props) {
   super(props)
 
   this.state = {
-    result: ""
+    formName: ""
     }
 
 }
 
-myCallback = (dataFromForm) => {
+callbackFormText = (dataFromForm) => {
   if (dataFromForm !== undefined) {
-  this.setState({result: dataFromForm})
-}
-
+    this.setState({formName: dataFromForm})
+  }
 }
 
 
 render() {
 
-let theory = this.state.result
-// "temp conspiracy text"// come up from Form
+let theory = this.state.formName // change to a function that will assemble sentence
 
   return (
     <div>
       <Header />
       <Result resultText={theory}/>
-      <Form callbackFromParent={this.myCallback}/>
+      <Form returnConspiracyText={this.callbackFormText}/>
       <Footer />
     </div>
   )

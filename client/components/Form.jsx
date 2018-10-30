@@ -18,25 +18,16 @@ handleChange(ev) {
 handleSubmit(ev) {
   ev.preventDefault();
   if (this.state.submittedName) {
-    this.sendTextToResult() // for using state value
+    this.props.returnConspiracyText(this.state.submittedName)
   }
   else {
-    console.log("no name")
-    this.sendTextToResult() // for generating without state value
+    this.props.returnConspiracyText()
   }
 }
 
 clearInput() {
   this.setState({submittedName: ""})
-  console.log("cleared")
 }
-
-
-sendTextToResult = () => {
-  let dataPassToParent = "Consp theory FROM FORM" // change this to be result of compiling sentence fragments
-  this.props.callbackFromParent(dataPassToParent)
-}
-
 
 render() {
 return (
