@@ -1,7 +1,7 @@
 
 	//If user doesn't input a noun use one from our JSON
 	if (thing.noun === ""){
-		if(Math.random() >= 0.5){
+		if (Math.random() >= 0.5){
 			req.body.noun = conspiracyData.nouns[randomNoun]
 			thing = req.body
 		}
