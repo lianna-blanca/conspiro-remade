@@ -1,12 +1,3 @@
-let conspiracyData = require("./conspiracy.json");
-
-server.post("/", function(req, res) {
-	//Pull random noun from our list
-	let randomNoun = Math.floor((Math.random() * (conspiracyData.nouns.length - 1)));
-	let randomStringsForNouns = Math.floor((Math.random() * (conspiracyData.stringsForNouns.length - 1)));
-	let randomIntro = Math.floor((Math.random() * (conspiracyData.intro.length - 1)));
-	let randomStringsForObjects = Math.floor((Math.random() * (conspiracyData.stringsForObjects.length - 1)));
-	let randomGrammaticalObjects = Math.floor((Math.random() * (conspiracyData.grammaticalObjects.length - 1)));
 
 	//Move request body into noun
 	let conspiracyPOST = req.body;
@@ -27,7 +18,3 @@ server.post("/", function(req, res) {
 			conspiracyPOST.object = conspiracyData.grammaticalObjects[randomGrammaticalObjects]
 		}
 	}
-
-	res.render("conspiracy", conspiracyPOST)
-})
-

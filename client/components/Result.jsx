@@ -7,7 +7,7 @@ constructor(props) {
   this.logDataFromApp = this.logDataFromApp.bind(this)
 }
 
-logDataFromApp() {
+logDataFromApp() { // temp function for build
   console.log("in Result")
   console.log(this.props.resultText)
 }
@@ -17,16 +17,10 @@ render() {
   this.logDataFromApp()
 return (
   <div>
-    <p>
+    <p id="the-conspiracy">
       {this.props.resultText}
     </p>
 
-
-{/* <p id="the-conspiracy"><strong>{{ noun }} {{conspiracy}} {{object}}</strong></p> */}
-
-{/* <form action="/">
-<button type="submit" className="btn btn-danger btn-lg">Home</button>
-</form> */}
   </div>
 )
 }
