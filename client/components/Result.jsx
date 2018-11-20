@@ -8,8 +8,8 @@ constructor(props) {
 }
 
 logDataFromApp() { // temp function for build
-  console.log("in Result")
-  console.log(this.props.resultText)
+  // console.log("in Result")
+  // console.log(this.props.resultText)
 }
 
 

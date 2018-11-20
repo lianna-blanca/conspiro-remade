@@ -3,7 +3,7 @@ import Header from "./Header"
 import Form from "./Form"
 import Result from "./Result"
 import Footer from "./Footer"
-let conspiracyData = require("./theoryText.json");
+let data = require("./theoryText.json");
 
 class App extends React.Component {
 constructor(props) {
@@ -14,7 +14,7 @@ constructor(props) {
     }
 
   this.buildTheory = this.buildTheory.bind(this)
-  this.randomThing = this.randomThing.bind(this)
+  this.randomy = this.randomy.bind(this)
 
 }
 
@@ -25,26 +25,39 @@ callbackFormText = (dataFromForm) => {
   }
 }
 
-randomThing(thisArray) {
-	return Math.floor((Math.random() * (thisArray.length - 1)))
+randomy(arr) {
+  return arr[Math.floor((Math.random() * (arr.length - 1)))]
 }
 
 buildTheory() {
+  let submittedName = this.state.formName
 
-	//Pull random words/phrases from arrays
-	let randomNoun = this.randomThing(conspiracyData.nouns)
-  let randomStringsForNouns = this.randomThing(conspiracyData.stringsForNouns)
-	let randomIntro = this.randomThing(conspiracyData.intro)
-	let randomStringsForObjects = this.randomThing(conspiracyData.stringsForObjects)
-	let randomGrammaticalObjects = this.randomThing(conspiracyData.grammaticalObjects)
+	let intro = this.randomy(data.intros)
+	let nounPhrase = this.randomy(data.nounPhrases)
+	let verbPhrase = this.randomy(data.verbPhrases)
+	let transitivePhrase = this.randomy(data.transitivePhrases)
+	let obj = this.randomy(data.objects)
+	let sentence = this.randomy(data.sentences)
 
+// console.log(intro)
+// console.log(nounPhrase)
+// console.log(verbPhrase)
+// console.log(transitivePhrase)
+// console.log(obj)
+// console.log(sentence)
+
+if (submittedName) console.log("Name entered:", submittedName)
+else console.log("No name entered")
+
+
+return "Hello"
 }
 
 
 
 render() {
 this.buildTheory()
-let theory = this.state.formName // change to a function that will assemble sentence
+let theory = this.buildTheory() //this.state.formName // change to a function that will assemble sentence
 
   return (
     <div>

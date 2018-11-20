@@ -1,5 +1,5 @@
 {
-  "intro": [
+  "intros": [
     "Did you know that... ",
     "Are you aware that... ",
     "The truth is that... ",
@@ -8,20 +8,8 @@
     "Nine out of ten people don't realize that: "
   ],
 
-  "stringsForNouns": [
-    " is actually dead and was replaced by a body double",
-    " is a time-travelling vampire",
-    " was secretly a KGB spy",
-    " does not exist",
-    " helped build the pyramids",
-    " helped build Stonehenge",
-    " can control the weather",
-    " is running the world",
-    " is Invading!",
-    " is tired of your bullshit!"
-  ],
 
-  "nouns": [
+  "nounPhrases": [
     "Hitler",
     "The Lizard People",
     "The last Dinosaur",
@@ -43,7 +31,20 @@
     "Sir George Sitwell, fourth Baronet of Renishaw, Derbyshire"
   ],
     
-  "stringsForObjects":[
+  "verbPhrases": [
+    " is actually dead and was replaced by a body double",
+    " is a time-travelling vampire",
+    " was secretly a KGB spy",
+    " does not exist",
+    " helped build the pyramids",
+    " helped build Stonehenge",
+    " can control the weather",
+    " is running the world",
+    " is Invading!",
+    " is tired of your bullshit!"
+  ],
+
+  "transitivePhrases":[
     "Millenials are killing ",
     "Unix is a ",
     "The government is poisoning ",
@@ -55,7 +56,7 @@
     "Cats started "
   ],
   
-  "grammaticalObjects": [
+  "objects": [
     "the Illuminati",
     "Pokemon Go",
     "Millenials",
@@ -68,7 +69,7 @@
     "the Umbrella Corporation"
   ],
 
-  "stringAlone": [
+  "sentences": [
     "Siri Apocalypse",
     "The Large Hadron Collider is a device for awakening an Egyptian god",
     "Nicki Minaj Rapping Is Actually Jay-Z Sped Up",
