@@ -43,7 +43,6 @@ randomy(arr) {
 
 
 render() {
-console.log("text passed in:", this.props.resultText)
 let result = this.buildTheory()
 
 return (
