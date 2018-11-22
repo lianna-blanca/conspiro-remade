@@ -13,3 +13,5 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 ## To Do:
 
 * Add refresh on button push 
+
+* Make Form and Result into one component
