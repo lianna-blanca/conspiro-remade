@@ -26,12 +26,7 @@ clearInput() {
 
 handleSubmit(ev) {
   ev.preventDefault();
-  if (this.state.submittedName) {
-    // this.props.getForm(this.state.submittedName)
-  }
-  else {
-    // this.props.getForm()
-  }
+  this.buildTheory(this.state.submittedName)
 }
 
 
@@ -43,7 +38,8 @@ randomy(arr) {
 
 
 buildTheory() {
-  let submittedName = this.props.resultText
+  let intro = this.randomy(data.intros)
+  let submittedName = this.state.submittedName
 	let nounPhrase = this.randomy(data.nounPhrases)
 	let verbPhrase = this.randomy(data.verbPhrases)
 	let transitivePhrase = this.randomy(data.transitivePhrases)
@@ -66,21 +62,17 @@ else {
   else theory = sentence
 }
 
-return theory
+document.getElementById("intro").innerHTML = intro
+document.getElementById("the-conspiracy").innerHTML = theory
 }
 
 
 render() {
-let result = this.buildTheory()
 
 return (
 <div>
-  <p id="intro">
-    {/* {this.randomy(data.intros)} */}
-  </p>
-  <p id="the-conspiracy">
-    {/* {result} */}
-  </p>
+  <p id="intro"></p>
+  <p id="the-conspiracy"></p>
   <form onSubmit={this.handleSubmit}>
     <div className="form-group">
       <button type="submit" value="submit" className="btn btn-danger btn-lg">Generate Conspiracy Theory</button>
