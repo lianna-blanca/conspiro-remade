@@ -82,8 +82,10 @@ return (
       </label>
     </div>
   </form>
-  <p id="intro"></p>
-  <p id="the-conspiracy"></p>
+  <div className="conspiracy-result">
+    <p id="intro"></p>
+    <p id="the-conspiracy"></p>
+  </div>
 </div>
 )
 }
