@@ -12,8 +12,8 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 
 * Make Form and Result into one component
 
-## To Do:
+* CSS rebuilt to match original project
 
-* CSS
+## To Do:
 
 * WCAG / Accesibility (ARIA)
