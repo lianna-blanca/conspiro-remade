@@ -71,19 +71,19 @@ render() {
 
 return (
 <div>
-  <p id="intro"></p>
-  <p id="the-conspiracy"></p>
   <form onSubmit={this.handleSubmit}>
     <div className="form-group">
       <button type="submit" value="submit" className="btn btn-danger btn-lg">Generate Conspiracy Theory</button>
     </div>
     <div className="form-group">
       <label className="control-label">
-        <h4>Enter your name for a customised conspiracy theory:</h4>
+        <h4 id="enter-name">Enter your name for a customised conspiracy theory:</h4>
         <input type="text" value={this.state.submittedName} onChange={this.handleChange} id="name" name="noun" /><button type="reset" onClick={() => {this.clearInput()}}>Clear</button>
       </label>
     </div>
   </form>
+  <p id="intro"></p>
+  <p id="the-conspiracy"></p>
 </div>
 )
 }

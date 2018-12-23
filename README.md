@@ -15,3 +15,5 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 ## To Do:
 
 * CSS
+
+* WCAG / Accesibility (ARIA)
