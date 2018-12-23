@@ -10,8 +10,10 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 
 * Theory generation works on page refresh or when name is submitted 
 
+* Make Form and Result into one component
+
 ## To Do:
 
-* Add refresh on button push 
+* CSS
 
-* Make Form and Result into one component
+* WCAG / Accesibility (ARIA)
