@@ -62,7 +62,7 @@ body::after {
 .footer {
   font-size: 1.1em;
   background-color: white;
-  padding-left: 5px;
+  padding-left: 0.5em;
 
   position: absolute;
   bottom: 0;
