@@ -18,4 +18,4 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 
 * WCAG / Accesibility (ARIA)
 
-* expand answer arrays
+* Add more answers to arrays
