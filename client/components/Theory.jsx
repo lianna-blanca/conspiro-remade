@@ -37,9 +37,8 @@ randomy(arr) {
 }
 
 
-buildTheory() {
+buildTheory(submittedName) {
   let intro = this.randomy(data.intros)
-  let submittedName = this.state.submittedName
 	let nounPhrase = this.randomy(data.nounPhrases)
 	let verbPhrase = this.randomy(data.verbPhrases)
 	let transitivePhrase = this.randomy(data.transitivePhrases)
@@ -70,23 +69,27 @@ document.getElementById("the-conspiracy").innerHTML = theory
 render() {
 
 return (
-<div>
+<main>
   <form onSubmit={this.handleSubmit}>
+
     <div className="form-group">
       <button type="submit" value="submit" className="btn btn-danger btn-lg">Generate Conspiracy Theory</button>
     </div>
+
     <div className="form-group">
-      <label className="control-label">
-        <h4 id="enter-name">Enter your name for a customised conspiracy theory:</h4>
-        <input type="text" value={this.state.submittedName} onChange={this.handleChange} id="name" name="noun" /><button type="reset" onClick={() => {this.clearInput()}}>Clear</button>
+      <label for="input-name" className="control-label">
+        <h4 id="enter-name-header">Enter your name for a customised conspiracy theory:</h4>
+        <input id="input-name" type="text" value={this.state.submittedName} onChange={this.handleChange} id="name" name="noun" /><button type="reset" onClick={() => {this.clearInput()}}>Clear</button>
       </label>
     </div>
   </form>
+
   <div className="conspiracy-result">
     <p id="intro"></p>
     <p id="the-conspiracy"></p>
   </div>
-</div>
+
+</main>
 )
 }
 }

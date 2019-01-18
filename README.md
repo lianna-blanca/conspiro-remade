@@ -16,6 +16,6 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 
 ## To Do:
 
-* WCAG / Accesibility (ARIA)
+* WCAG / accesibility (ARIA)
 
 * Add more answers to arrays

@@ -38,7 +38,7 @@ body::after {
   text-align: center;
 }
 
-#enter-name {
+#enter-name-header{
   font-size: 2em;
   font-family: "Nosifer";
 }
@@ -59,7 +59,7 @@ body::after {
   font: bold;
 }
 
-.footer {
+footer {
   font-size: 1.1em;
   background-color: white;
   padding-left: 0.5em;
