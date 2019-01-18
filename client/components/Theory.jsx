@@ -73,12 +73,12 @@ return (
   <form onSubmit={this.handleSubmit}>
 
     <div className="form-group">
-      <button type="submit" value="submit" className="btn btn-danger btn-lg">Generate Conspiracy Theory</button>
+      <button type="submit" value="submit" className="btn btn-danger btn-lg center-me">Generate Conspiracy Theory</button>
     </div>
 
     <div className="form-group">
-      <label for="input-name" className="control-label">
-        <h4 id="enter-name-header">Enter your name for a customised conspiracy theory:</h4>
+      <label htmlFor="input-name" className="control-label">
+        <h2 id="enter-name-header">Enter your name for a customised conspiracy theory:</h2>
         <input id="input-name" type="text" value={this.state.submittedName} onChange={this.handleChange} id="name" name="noun" /><button type="reset" onClick={() => {this.clearInput()}}>Clear</button>
       </label>
     </div>
