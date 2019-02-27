@@ -8,6 +8,7 @@ constructor(props) {
     submittedName: ""
     }
 
+
   this.handleChange = this.handleChange.bind(this)
   this.handleSubmit = this.handleSubmit.bind(this)
   this.buildTheory = this.buildTheory.bind(this)
@@ -71,7 +72,6 @@ render() {
 return (
 <main>
   <form onSubmit={this.handleSubmit}>
-
     <div className="form-group">
       <button type="submit" value="submit" className="btn btn-danger btn-lg center-me">Generate Conspiracy Theory</button>
     </div>
@@ -95,4 +95,3 @@ return (
 }
 
 export default Form
-
