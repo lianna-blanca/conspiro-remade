@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 let data = require("./theoryText.json");
 
 class Form extends React.Component {
