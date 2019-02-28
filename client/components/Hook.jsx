@@ -14,11 +14,11 @@ function hookingFunct() {
 }
 
 const Hook = () => {
-return (
-  <div>
-    {hookingFunct()}
-  </div>
-)
+  return (
+    <div>
+      {hookingFunct()}
+    </div>
+  )
 }
 
 export default Hook

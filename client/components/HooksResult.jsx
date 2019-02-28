@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 let data = require("./theoryText.json");
 
-// // rebulid coming
+// // rebulid WIP
 
+
+  // this.buildTheory = this.buildTheory.bind(this)
+  // this.randomy = this.randomy.bind(this)
 
 // randomy(arr) {
 //   return arr[Math.floor((Math.random() * (arr.length - 1)))]
@@ -39,12 +42,13 @@ let data = require("./theoryText.json");
 
 
 
-
+const HooksResult = () => {
 // return (
   // <div className="conspiracy-result">
   //   <p id="intro"></p>
   //   <p id="the-conspiracy"></p>
   // </div>
 // )
+}
 
 export default HooksResult

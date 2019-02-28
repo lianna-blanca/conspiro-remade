@@ -3,7 +3,7 @@ import Header from "./Header"
 // import Theory from "./Theory"
 import Footer from "./Footer"
 
-import HooksResult from "./HooksResult"
+// import HooksResult from "./HooksResult"
 import HooksForm from "./HooksForm"
 
 
@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Header />
       <main>
-        <HooksResult />
+        {/* <HooksResult /> */}
         <HooksForm />
       </main>
       {/* <Theory /> */}
