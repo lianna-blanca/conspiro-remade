@@ -11,8 +11,10 @@ const App = () => {
   return (
     <div>
       <Header />
-      <HooksResult />
-      <HooksForm />
+      <main>
+        <HooksResult />
+        <HooksForm />
+      </main>
       {/* <Theory /> */}
       <Footer />
     </div>
