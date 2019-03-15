@@ -16,10 +16,10 @@ function generateConspiracyHooked() {
   let sentence = this.randomy(data.sentences)
   let theory = ""
 
-  if (submittedName) {
-    theory = submittedName + verbPhrase
-  }
-  else {
+  // if (submittedName) {
+  //   theory = submittedName + verbPhrase
+  // }
+  // else {
     let num = Math.random()
     if (num >= 0.3) {
       theory = nounPhrase + verbPhrase
@@ -28,7 +28,7 @@ function generateConspiracyHooked() {
       theory = transitivePhrase + objPhrase
     }
   else theory = sentence
-  }
+  // }
 
   return (
     <div className="conspiracy-result">
