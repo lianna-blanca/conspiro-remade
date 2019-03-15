@@ -12,7 +12,7 @@ function generateConspiracyHooked() {
   let nounPhrase = this.randomy(data.nounPhrases)
   let verbPhrase = this.randomy(data.verbPhrases)
   let transitivePhrase = this.randomy(data.transitivePhrases)
-  let obj = this.randomy(data.objects)
+  let objPhrase = this.randomy(data.objects)
   let sentence = this.randomy(data.sentences)
   let theory = ""
 
@@ -25,22 +25,21 @@ function generateConspiracyHooked() {
       theory = nounPhrase + verbPhrase
     }
     else if (num < 0.3 && num <= 0.7) {
-      theory = transitivePhrase + obj
+      theory = transitivePhrase + objPhrase
     }
   else theory = sentence
   }
 
-
-return (
-  <div className="conspiracy-result">
-    <p id="intro">{introText}</p>
-    <p id="the-conspiracy">{theory}</p>
-  </div>
-)
+  return (
+    <div className="conspiracy-result">
+      <p id="intro">{introText}</p>
+      <p id="the-conspiracy">{theory}</p>
+    </div>
+  )
 }
 
 const HooksResult = () => {
-  return {generateConspiracyHooked()}
+  return generateConspiracyHooked()
 }
 
 export default HooksResult
