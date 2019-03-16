@@ -8,13 +8,15 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 
 ## Latest updates:
 
-* Theory generation works on page refresh or when name is submitted 
+* Rebuilt with React Hooks
 
 * Make Form and Result into one component
 
 * CSS rebuilt to match original project
 
 ## To Do:
+
+* Prevent auto generation of theory on inital load or refreshes as name is entered (handle change)
 
 * WCAG / accesibility (ARIA)
 
