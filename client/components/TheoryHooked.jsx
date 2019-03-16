@@ -1,12 +1,41 @@
 import React, { useState } from "react"
+let data = require("./theoryText.json");
 
-// // rebulid WIP
-// // //   this.buildTheory(this.state.submittedName)
+function randomy(arr) {
+  return arr[Math.floor((Math.random() * (arr.length - 1)))]
+}
 
-function Form() {
+function FormAndTheory() {
   const [submittedName, setSubmittedName] = useState("");
+  let introText = randomy(data.intros)
+  let nounPhrase = randomy(data.nounPhrases)
+  let verbPhrase = randomy(data.verbPhrases)
+  let transitivePhrase = randomy(data.transitivePhrases)
+  let objPhrase = randomy(data.objects)
+  let sentence = randomy(data.sentences)
+  let theory = ""
+
+  if (submittedName) {
+    theory = submittedName + verbPhrase
+  }
+  else {
+    let num = Math.random()
+    if (num >= 0.3) {
+      theory = nounPhrase + verbPhrase
+    }
+    else if (num < 0.3 && num <= 0.7) {
+      theory = transitivePhrase + objPhrase
+    }
+  else theory = sentence
+  }
 
 return(
+  <main>
+  <div className="conspiracy-result">
+    <p id="intro">{introText}</p>
+    <p id="the-conspiracy">{theory}</p>
+  </div>    
+
   <form>
   {console.log("submittedName is: ", submittedName)}
     <div className="form-group">
@@ -33,13 +62,13 @@ return(
         <button type="reset" onClick={() => setSubmittedName("")}>Clear</button>
       </label>
     </div>
-
   </form>
+  </main>
 )
 }
 
-const HooksForm = () => {
-    return Form()
+const TheoryHooked = () => {
+    return FormAndTheory()
 }
 
-export default HooksForm
+export default TheoryHooked
