@@ -39,7 +39,8 @@ function generateConspiracyHooked() {
 }
 
 const HooksResult = () => {
-  return generateConspiracyHooked()
+  return "HooksResult"
+  // generateConspiracyHooked()
 }
 
 export default HooksResult
