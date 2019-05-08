@@ -17,13 +17,6 @@
       "transform-class-properties"
     ]
   },
-  "jest": {
-    "setupFiles": [
-      "./tests/setup.js"
-    ],
-    "verbose": true,
-    "testURL": "http://localhost/"
-  },
   "dependencies": {
     "express": "^4.16.2"
   },
@@ -33,9 +26,6 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "jest": "^24.1.0",
     "nodemon": "^1.18.3",
     "path": "^0.12.7",
     "react": "^16.8.0",

@@ -1,8 +1,8 @@
 # conspiro-remade
 
-Exercise to practice coding in various languages by remaking a group project, Conspiro (https://conspiro.herokuapp.com). 
+Exercise to practice coding in various languages by remaking a group project, Conspiro (https://conspiro.herokuapp.com)
 
-Original project written in JavaScript and Handlebars; this version in JavaScript and React.
+Original project written in JavaScript and Handlebars; this version in JavaScript and React (Hooks).
 
 # Project Progress
 
@@ -16,8 +16,6 @@ Original project written in JavaScript and Handlebars; this version in JavaScrip
 
 ## To Do:
 
-* Prevent auto generation of theory on inital load or refreshes as name is entered (handle change)
-
 * WCAG / accesibility (ARIA)
 
-* Add more answers to arrays
+* Add more potential answers to arrays
